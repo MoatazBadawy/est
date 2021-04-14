@@ -42,7 +42,7 @@
         android:layout_marginStart="@dimen/_12sdp"
         android:layout_marginTop="@dimen/_12sdp"
         android:elevation="@dimen/_1sdp"
-        android:text="مذكرات الدعوة والداعية"
+        android:text="قذائف الحق"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/bcg_book_star_content"
         app:layout_constraintHorizontal_bias="0.0"
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_12sdp"
         android:layout_marginTop="@dimen/_6sdp"
-        android:text="الإمام حسن البنا"
+        android:text="محمد الغزالي"
         android:elevation="@dimen/_1sdp"
         app:layout_constraintStart_toEndOf="@+id/book_cover_img_star_content"
         app:layout_constraintTop_toBottomOf="@+id/book_title_star_content" />
