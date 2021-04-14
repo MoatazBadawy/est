@@ -85,6 +85,7 @@ public class LibraryFragment extends Fragment implements IOnBackPressed, BookCal
 
         // start the activity with scene transition
         getContext().startActivity(intent);
+        getActivity().overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     @Override
