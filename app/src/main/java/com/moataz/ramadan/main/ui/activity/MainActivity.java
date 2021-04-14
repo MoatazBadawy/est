@@ -14,6 +14,7 @@ import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.moataz.ramadan.R;
+import com.moataz.ramadan.image.ui.fragment.ImageFragment;
 import com.moataz.ramadan.library.ui.fragment.LibraryFragment;
 import com.moataz.ramadan.main.ui.fragment.HomeFragment;
 import com.moataz.ramadan.main.utils.IOnBackPressed;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     final Fragment fragment1 = new HomeFragment();
     final Fragment fragment2 = new LibraryFragment();
-    final Fragment fragment3 = new HomeFragment();
+    final Fragment fragment3 = new ImageFragment();
     final FragmentManager fm = getSupportFragmentManager();
     Fragment active = fragment1;
 
