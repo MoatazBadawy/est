@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_135sdp">
+
+    <ImageView
+        android:id="@+id/bcg_book"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_104sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:background="@drawable/container_bg"
+        android:elevation="@dimen/_1sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/book_cover_img"
+        android:layout_width="@dimen/_77sdp"
+        android:layout_height="@dimen/_116sdp"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:scaleType="centerCrop"
+        android:elevation="@dimen/_1sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/book1" />
+
+    <TextView
+        android:id="@+id/book_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:textStyle="bold"
+        android:elevation="@dimen/_1sdp"
+        android:text="مذكرات الدعوة والداعية"
+        app:layout_constraintStart_toEndOf="@+id/book_cover_img"
+        app:layout_constraintTop_toTopOf="@+id/bcg_book" />
+
+    <TextView
+        android:id="@+id/book_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:text="الإمام حسن البنا"
+        android:elevation="@dimen/_1sdp"
+        app:layout_constraintStart_toEndOf="@+id/book_cover_img"
+        app:layout_constraintTop_toBottomOf="@+id/book_title" />
+
+    <RatingBar
+        android:id="@+id/book_rating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:indeterminateTint="#FF9800"
+        android:elevation="@dimen/_1sdp"
+        app:layout_constraintStart_toEndOf="@+id/book_cover_img"
+        app:layout_constraintTop_toBottomOf="@+id/book_author" />
+
+    <TextView
+        android:id="@+id/pages_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:text="عدد الصفحات: ٢٢٥"
+        android:textSize="12sp"
+        android:elevation="@dimen/_1sdp"
+        app:layout_constraintStart_toEndOf="@+id/book_cover_img"
+        app:layout_constraintTop_toBottomOf="@+id/book_rating" />
+</androidx.constraintlayout.widget.ConstraintLayout>

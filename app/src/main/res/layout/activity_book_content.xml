@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".library.ui.activity.BookContentActivity">
+
+    <Button
+        android:id="@+id/button_back_books_content"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_back_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fastScrollEnabled="false"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:dividerHeight="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <ImageView
+                android:id="@+id/bcg_book_content"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:background="@drawable/container_bg"
+                android:elevation="@dimen/_1sdp"
+                android:transitionName="containerTN"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/book_cover_img_content"
+                android:layout_width="110dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:scaleType="centerCrop"
+                android:elevation="@dimen/_1sdp"
+                android:transitionName="coverTN"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/book1" />
+
+            <TextView
+                android:id="@+id/book_title_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:elevation="@dimen/_1sdp"
+                android:text="مذكرات الدعوة والداعية"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:transitionName="titleTN"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/book_cover_img_content"
+                app:layout_constraintTop_toTopOf="@+id/book_cover_img_content" />
+
+            <TextView
+                android:id="@+id/book_author_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:elevation="@dimen/_1sdp"
+                android:text="الإمام حسن البنا"
+                android:transitionName="authorTN"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/book_cover_img_content"
+                app:layout_constraintTop_toBottomOf="@+id/book_title_content" />
+
+            <RatingBar
+                android:id="@+id/book_rating_content"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:elevation="@dimen/_1sdp"
+                android:indeterminateTint="#FF9800"
+                app:layout_constraintStart_toEndOf="@+id/book_cover_img_content"
+                app:layout_constraintTop_toBottomOf="@+id/book_author_content" />
+
+            <TextView
+                android:id="@+id/pages_num_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="عدد الصفحات: ٢٢٥"
+                android:elevation="@dimen/_1sdp"
+                android:transitionName="pagesTN"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/book_cover_img_content"
+                app:layout_constraintTop_toBottomOf="@+id/book_rating_content" />
+
+            <TextView
+                android:id="@+id/book_details_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/container_text"
+                android:elevation="@dimen/_1sdp"
+                android:paddingLeft="32dp"
+                android:paddingTop="6dp"
+                android:paddingRight="32dp"
+                android:text="عن الكتاب"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/book_details_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/book_cover_img_content" />
+
+            <TextView
+                android:id="@+id/book_details_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/container_text"
+                android:elevation="@dimen/_1sdp"
+                android:lineSpacingExtra="4sp"
+                android:paddingTop="8dp"
+                android:paddingRight="32dp"
+                android:paddingLeft="32dp"
+                android:paddingBottom="6dp"
+                android:text="أجمل الغزالي أفكاره في هذا الكتاب في صورة مقالات على عادته في مثل هذه النوعية من الكتابات، إلا أنه قسَّم مقالات الكتاب إلى ثماني فصول تناولت طائفة كبيرة من القضايا المتنوعة، السياسية والفكرية والاجتماعية المتعلقة بالمسلمين، فرادى ومجتمعات، وبالأمة بشكل عام، والمطلوب في هذه المرحلة."
+                android:textSize="15sp"
+                android:transitionName="detailsTN"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/book_details_title" />
+
+            <TextView
+                android:id="@+id/star_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/container_text"
+                android:elevation="@dimen/_1sdp"
+                android:paddingRight="32dp"
+                android:paddingTop="6dp"
+                android:text="المزيد"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/book_details_content"
+                app:layout_constraintTop_toBottomOf="@+id/book_details_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_book_star"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:clipToPadding="false"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:elevation="@dimen/_1sdp"
+                android:fastScrollEnabled="false"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toTopOf="@+id/lin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/star_content" />
+
+            <LinearLayout
+                android:id="@+id/lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"
+                android:elevation="@dimen/_1sdp"
+                android:paddingTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <Button
+                    android:id="@+id/but_download_book"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/download_book"
+                    android:text="تحميل"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/but_read_book"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/download_book_white"
+                    android:text="قراءة"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
